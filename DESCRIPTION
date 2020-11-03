@@ -1,0 +1,15 @@
+Package: datatoolboxexos
+Title: Data And Code For The Datatoobox Exercises
+Version: 0.0.0.9000
+Authors@R:  Girard Tercieux
+    person(given = "Camille",
+           family = "Girard_Tercieux",
+           role = c("aut", "cre"),
+           email = "camillegirardtercieux@gmail.com")
+Description: Provides data and code for the CESAB Datatoolbox formation.
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
