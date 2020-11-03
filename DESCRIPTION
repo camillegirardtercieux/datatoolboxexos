@@ -1,9 +1,9 @@
 Package: datatoolboxexos
 Title: Data And Code For The Datatoobox Exercises
 Version: 0.0.0.9000
-Authors@R: Girard Tercieux
+Authors@R:
     person(given = "Camille",
-           family = "Girard_Tercieux",
+           family = "Girard Tercieux",
            role = c("aut", "cre"),
            email = "camillegirardtercieux@gmail.com")
 Description: Provides data and code for the CESAB Datatoolbox formation.
