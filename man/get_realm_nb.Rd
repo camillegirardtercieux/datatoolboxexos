@@ -10,7 +10,7 @@ get_realm_nb(ursus_eco)
 \item{ursus_eco}{}
 }
 \value{
-ursus_eco_realm a tibble counting the number of realms containing Ursidae species
+ursus_realm a tibble counting the number of realms containing Ursidae species
 }
 \description{
 Number of realms where each Ursidae species is found

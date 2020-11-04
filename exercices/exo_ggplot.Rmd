@@ -19,10 +19,21 @@ pantheria <- datatoolboxexos::data_pantheria() %>%
 # Data exploration
 
 ```{r}
-pantheria %>% dplyr::count(MSW05_Family)
-pantheria %>% dplyr::count(MSW05_Order)
+pantheria %>% dplyr::count(Family)
+pantheria %>% dplyr::count(Order)
 
-pantheria%>%dplyr::filter(!is.na(Homerange_indiv_km2))%>%dplyr::group_by(MSW05_Family)%>%dplyr::summarise(m = mean(Homerange_indiv_km2), sd = sd(Homerange_indiv_km2),n = dplyr::n())
+pantheria%>%dplyr::filter(!is.na(Homerange_indiv_km2))%>%dplyr::group_by(Family)%>%dplyr::summarise(m = mean(Homerange_indiv_km2), sd = sd(Homerange_indiv_km2),n = dplyr::n())
 
+```
+# First plot
+
+```{r}
+datatoolboxexos::plot_families(datatoolboxexos::data_plot_families(pantheria))
+```
+
+# Second plot
+
+```{r}
+datatoolboxexos::plot_littersize_longevity(datatoolboxexos::data_plot_littersize_longevity(pantheria))
 ```
 

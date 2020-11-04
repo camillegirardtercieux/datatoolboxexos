@@ -4,7 +4,7 @@
 \alias{combine_all_ursus}
 \title{Combination of all info}
 \usage{
-combine_all_ursus(ursus_eco_realm, ursus_eco_biomes, eco_ursus, ursus_list)
+combine_all_ursus(ursus_realm, ursus_biomes, ursus_ecoregions, ursus_list)
 }
 \arguments{
 \item{ursus_list}{}

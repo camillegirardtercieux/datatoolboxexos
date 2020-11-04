@@ -10,7 +10,7 @@ get_biome_nb(ursus_eco)
 \item{ursus_eco}{}
 }
 \value{
-ursus_eco_biomes a tibble counting the number of biomes containing Ursidae species
+ursus_biomes a tibble counting the number of biomes containing Ursidae species
 }
 \description{
 Number of biomes where each Ursidae species is found

@@ -23,4 +23,5 @@ Imports:
     fishualize,
     forcats,
     sf,
-    visNetwork
+    visNetwork,
+    drake

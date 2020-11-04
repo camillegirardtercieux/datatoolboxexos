@@ -10,7 +10,7 @@ get_ecoregions_nb(ursus_eco)
 \item{ursus_eco}{}
 }
 \value{
-ursus_eco_ecoregions a tibble counting the number of ecoregions containing Ursidae species
+ursus_ecoregions a tibble counting the number of ecoregions containing Ursidae species
 }
 \description{
 Number of ecoregions where each Ursidae species is found

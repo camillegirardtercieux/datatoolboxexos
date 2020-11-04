@@ -36,10 +36,10 @@ La base de données WildFinder du WWF contient des données de présence/absence
 sp_eco <- datatoolboxexos::data_mammals_ecoregions()
 
 #read wildfinder-ecoregions.csv
-eco <- datatoolboxexos::data_ecoregion()
+eco_list <- datatoolboxexos::data_ecoregion()
 
 #read wildfinder-species.csv
-sp <- datatoolboxexos::data_mammals()
+sp_list <- datatoolboxexos::data_mammals()
 
 #tabulate the ecoregions
 mam_per_eco <- table(sp_eco$ecoregion_id)
@@ -49,5 +49,19 @@ hist(mam_per_eco,
      breaks = 50
 )
 
-
 ```
+
+# Les Ours
+
+```{r Ursidae}
+Ursus <- datatoolboxexos::select_ursus(sp_list = sp_list) %>%
+  datatoolboxexos::joints_ursus_eco(sp_eco = sp_eco, eco_list = eco_list)
+
+Ursus_realm <- datatoolboxexos::get_realm_nb(Ursus)
+Ursus_eco <- datatoolboxexos::get_ecoregions_nb(Ursus)
+Ursus_biome <- datatoolboxexos::get_biome_nb(Ursus)
+
+Ursus_final <- datatoolboxexos::combine_all_ursus(Ursus_biome, Ursus_eco, Ursus_realm, Ursus)
+print(Ursus_final, n=Inf)
+```
+
