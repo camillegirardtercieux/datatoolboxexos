@@ -1,7 +1,7 @@
 ---
 title: "Manipulation de données avec {dplyr}"
 author: "francois.guilhaumon@ird.fr"
-date: "2020-11-03"
+date: "2020-11-04"
 output:
   html_document:
     keep_md: yes
@@ -41,6 +41,42 @@ sp_eco <- datatoolboxexos::data_mammals_ecoregions()
 ## cols(
 ##   ecoregion_id = col_character(),
 ##   species_id = col_double()
+## )
+```
+
+```r
+#read wildfinder-ecoregions.csv
+eco <- datatoolboxexos::data_ecoregion()
+```
+
+```
+## 
+## ── Column specification ──────────────────────────────────────────────────────────────
+## cols(
+##   ecoregion_id = col_character(),
+##   ecoregion = col_character(),
+##   realm = col_character(),
+##   biome = col_character()
+## )
+```
+
+```r
+#read wildfinder-species.csv
+sp <- datatoolboxexos::data_mammals()
+```
+
+```
+## 
+## ── Column specification ──────────────────────────────────────────────────────────────
+## cols(
+##   species_id = col_double(),
+##   class = col_character(),
+##   order = col_character(),
+##   family = col_character(),
+##   genus = col_character(),
+##   species = col_character(),
+##   common = col_character(),
+##   sci_name = col_character()
 ## )
 ```
 

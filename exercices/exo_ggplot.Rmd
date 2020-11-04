@@ -1,0 +1,28 @@
+---
+title: "exo_ggplot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load data and clean
+
+```{r}
+pantheria <- datatoolboxexos::data_pantheria() %>%
+  datatoolboxexos::tidy_pantheria()%>%
+  print(n=Inf)
+
+```
+
+# Data exploration
+
+```{r}
+pantheria %>% dplyr::count(MSW05_Family)
+pantheria %>% dplyr::count(MSW05_Order)
+
+pantheria%>%dplyr::filter(!is.na(Homerange_indiv_km2))%>%dplyr::group_by(MSW05_Family)%>%dplyr::summarise(m = mean(Homerange_indiv_km2), sd = sd(Homerange_indiv_km2),n = dplyr::n())
+
+```
+

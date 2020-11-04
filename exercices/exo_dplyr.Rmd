@@ -34,6 +34,13 @@ La base de données WildFinder du WWF contient des données de présence/absence
 ```{r explo_histo}
 #read wildfinder-ecoregions_species.csv
 sp_eco <- datatoolboxexos::data_mammals_ecoregions()
+
+#read wildfinder-ecoregions.csv
+eco <- datatoolboxexos::data_ecoregion()
+
+#read wildfinder-species.csv
+sp <- datatoolboxexos::data_mammals()
+
 #tabulate the ecoregions
 mam_per_eco <- table(sp_eco$ecoregion_id)
 #histogram
@@ -41,4 +48,6 @@ hist(mam_per_eco,
      main = "Number of mammal species per ecoregion",
      breaks = 50
 )
+
+
 ```
